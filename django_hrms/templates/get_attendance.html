@@ -1,0 +1,20 @@
+ {% extends 'base.html' %}
+
+ 
+   {% block content %}
+
+        {%  if attend_state == 'in'  %}
+        
+        <button type="button" class="btn btn-primary" >签到</button>
+       
+        {% elif attend_state == 'out' %}
+     
+        <button type="button" class="btn btn-primary" >签退</button>
+    
+        {% else  %}
+       
+        <h2>不在打卡时间段</h2>
+        
+        {% endif %}
+
+   {% endblock content %}

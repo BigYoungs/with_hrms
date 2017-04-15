@@ -1,0 +1,16 @@
+ {% extends 'base.html' %}
+
+ 
+   {% block content %}
+
+        {% if request.user.is_authenticated %}
+            <p>
+                {{request.user}} 您已經登入囉~
+                <a href="/logout/">登出</a>
+            </p>
+
+        {% else %}
+            <p>您尚未登入喔~<a href="/login/">登入</a></p>
+        {% endif %}
+
+   {% endblock content %}

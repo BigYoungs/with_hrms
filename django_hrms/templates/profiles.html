@@ -1,0 +1,27 @@
+ {% extends 'base.html' %}
+
+ 
+   {% block content %}
+
+      <table>
+      	 <ul>
+                  
+      	 	<li>姓名：{{ user.name }} </li>
+      		<li>性别：{{ user.sex }} </li>
+      	 	<li>生日：{{ user.birth }} </li>
+      	 	<li>出生地：{{ user.birth_place }} </li>
+      	 	<li>国籍：{{ user.nation }} </li>
+      	 	<li>身份证号码：{{ user.identification_num }} </li>
+      	 	<li>政治面貌：{{ user.political }} </li>
+      	 	<li>部门：{{ user.department_id }} </li>
+      	 	<li>毕业院校：{{ user.graduation_school }} </li>
+      	 	<li>学历：{{ user.education }} </li>
+      	 	<li>手机：{{ user.telephone }} </li>
+      	 	<li>邮箱：{{ user.email }} </li>
+      	 	<li>状态：{{ user.status }} </li>
+      	 	<li>职务：{{ user.duty }} </li>    
+                  
+      	 </ul>
+      </table>
+
+   {% endblock content %}

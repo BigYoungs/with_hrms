@@ -1,0 +1,20 @@
+ {% extends 'base.html' %}
+ 
+   {% block content %}
+
+        {% if request.user.is_authenticated %}
+            <p>
+                
+            </p>
+            
+        {% else %}
+
+            <form action="/test/" method="post">
+                <Input name="name" value="lala" /><br/>
+                <input type="text" name="phone" />
+                <button type="submit" name="submit"> Go </button>
+            </form>
+
+        {% endif %}
+
+   {% endblock content %}

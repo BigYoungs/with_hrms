@@ -1,0 +1,43 @@
+ {% extends 'base.html' %}
+
+ 
+   {% block content %}
+		
+		<h3>{{ user.name }} 的考勤记录</h>
+       
+
+        <table border="1" width="800" cellspacing="0" cellpadding="0" align="center">  
+   			<thead>  
+			        <tr>  
+			            <th >日期</th>  
+			            <th >签到时间</th>  
+			            <th >签退时间</th>  
+			            <th >上班情况</th> 
+			            <th >下班情况</th>
+			            <th >是否旷工</th>  
+			        </tr>  
+    		</thead>  
+    		
+    		 		
+    		 		 {% for aaa in aa %}
+					    <tbody>  
+					        <tr>  
+					        	 
+					            <td>{{aaa.attendance_day.attendance_day}}</td>  
+					            <td>{{aaa.attendance_day.sign_in}}</td>  
+					            <td>{{aaa.attendance_day.sign_out}}</td>  
+					            <td>{{ aaa.in_condition_status }}</td>
+					            <td>{{ aaa.out_condition_status }}</td>
+					            <td>{{ aaa.not_attend }}</td>
+					            <td></td>  
+					      		
+					        </tr>  
+					    </tbody>
+					{%	endfor %}
+		    		
+		    
+		</table>  
+
+
+
+   {% endblock content %}
